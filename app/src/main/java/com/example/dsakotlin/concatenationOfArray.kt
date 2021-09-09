@@ -7,7 +7,6 @@ fun main() {
     fun getConcatenation(nums: IntArray) : IntArray {
         val resultArray = IntArray(nums.size * 2)
 
-//        println("2  ".repeat(2))
         for(i in nums.indices){
             println("$i  , ${nums[i]} ")
             resultArray[i] = nums[i]
