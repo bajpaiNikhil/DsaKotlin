@@ -1,19 +1,34 @@
 package com.example.dsakotlin
 
 fun main() {
-    fun countConsistentStrings(allowed: String, words: Array<String>): Int {
-
-        for(i in words){
-            var a = setOf<String>(i)
-            println(a)
-
+    fun CountIs(allowedSet: MutableSet<Char>, word: String): Boolean {
+        for(w  in word){
+            if(!allowedSet.contains(w)){
+                return false
+            }
         }
-
-        return 1
+        println(word)
+        return true
     }
 
-    var allowed = "cab"
-    var words  = arrayOf("cc","acd","b","ba","bac","bad","ac","d")
+    fun countConsistentStrings(allowed: String, words: Array<String>): Int {
+
+        val allowedSet = mutableSetOf<Char>()
+        for(c in allowed){
+            allowedSet.add(c)
+        }
+        println(allowedSet)
+        var count = 0
+        for(word in words){
+            if(CountIs(allowedSet,word)){
+                count++
+            }
+        }
+        return count
+    }
+
+    val allowed = "cad"
+    val words  = arrayOf("cc","acd","b","ba","bac","bad","ac","d")
 
     println(countConsistentStrings(allowed , words))
 }
