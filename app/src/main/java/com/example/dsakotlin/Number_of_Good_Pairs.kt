@@ -31,6 +31,7 @@ fun main() {
             var count = numsHashMap[num]
             if(count == null) count = 0
             numsHashMap[num] = count+1
+
         }
         println(numsHashMap)
         for(i in numsHashMap.values){

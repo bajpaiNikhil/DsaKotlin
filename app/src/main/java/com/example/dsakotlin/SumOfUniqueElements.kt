@@ -11,7 +11,9 @@ fun main() {
             if(count ==null )count=0
             numsMap[i] = count+1
         }
+
         //println(numsMap)
+
         val keySum = numsMap.filterValues { it == 1 }.keys
         //println(keySum)
         return keySum.sum()
