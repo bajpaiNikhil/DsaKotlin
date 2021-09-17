@@ -26,6 +26,7 @@ fun main() {
                 max = max.coerceAtLeast(temp)
             }
             arr[arr.size - 1] = -1
+
             return arr
         }
     val array = intArrayOf(17,18,5,4,6,1)
