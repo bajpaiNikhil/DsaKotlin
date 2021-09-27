@@ -7,6 +7,8 @@ fun main() {
         if(first == 0){
             return last
         }
+
+
         if(last == 0){
             return first
         }
